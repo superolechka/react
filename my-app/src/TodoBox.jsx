@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Item from './Item';
+import { uniqueId } from 'lodash';
 
 function TodoBox() {
   const [items, setItems] = useState([]);
@@ -9,7 +10,7 @@ function TodoBox() {
     e.preventDefault();
     if (task.trim() === '') return;
     const newItem = {
-      id: Date.now(),
+      id: uniqueId(),
       task: task,
     };
     setItems([newItem, ...items]);
@@ -53,3 +54,4 @@ function TodoBox() {
 }
 
 export default TodoBox;
+
