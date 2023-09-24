@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import MarkdownEditor from './MarkdownEditor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App />
+  <MarkdownEditor onContentChange={console.log} />
 );
+
+
 
 
